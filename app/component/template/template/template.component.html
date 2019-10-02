@@ -1,0 +1,18 @@
+<div class="template">
+        <div class="template__fields">
+        <app-template-project  [serviceData]="serviceDataScope"
+         class="template__project"
+          #project></app-template-project>
+          <!-- QUANTITY CONTAINER -->
+        <app-quantity  class="template__quantity"
+        [serviceDataQuantity]="serviceDataQuantity"
+         #quantity></app-quantity>
+
+
+        </div>
+        <div class="template__space">&nbsp;</div>
+        <div class="template__save">
+          <button (click)="saveField(project.scoreField,quantity.datas)"  class="template__save-btn">SAVE</button>
+        </div>
+
+   </div>

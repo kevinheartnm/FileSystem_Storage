@@ -1,0 +1,112 @@
+.nav{
+  position: relative;
+  // TEMP: USE ANGULAR FOR THIS
+  // left: -230px;
+  // opacity:0;
+  height: 89.2vh;
+  transition: all 0.3s;
+  z-index: 900;
+  // SVG BUTTON
+  &__button{
+    position: absolute;
+    right:-3rem;
+    top:0;
+    z-index: 1000;
+    width: 3rem;
+    height: 3rem;
+    background-color: #000;
+    fill:#fff;
+    border:none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    &-svg{
+      width: 100%;
+      height:100%;
+      transition: all .3s;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  // TEMP: USE ANGULAR TO HANDLE rotaion
+  &:focus &__button  &__button-svg,
+  &:active &__button  &__button-svg{
+    transform : rotate(180deg);
+  }
+  // &:focus &__button  &__button-svg{
+  //   transform : rotate(180deg);
+  // }
+
+  //NAVIGATION FORM USE TO SELECT LINKS
+ &__side-bar{
+   // position: relative;
+   // top:0;
+   // left:-23rem;
+  // display: none;
+  visibility: hidden;
+   background-color: black;
+   height: 100%;
+   font-size: 1.6rem;
+   color: #fff;
+   // padding: 2rem;
+   opacity: 0;
+   transition: all 1s;
+   width:0;
+ }
+ &__side-bar-show{
+   visibility: visible;
+   opacity: 1;
+   width:230px;
+   // left:0;
+ }
+ //
+ // &__button:active + &__side-bar{
+ //   // TEMP: NEED THIS TO HAPPEN ON CLICK IN ANGULAR
+ //   opacity: 1;
+ //   width:230px;
+ //   // background-color: red;
+ // }
+ &:active,
+ &:focus{
+   left: 0px;
+   opacity:1;
+ }
+ // &__button ~ &__side-bar{
+ //   display: block;
+ //   background-color: blue;
+ // }
+
+  &__list{
+    list-style: none;
+    padding:2rem;
+  }
+  &__item{
+    margin-bottom: .5rem;
+  }
+  &__link,
+  &__link:link,
+  &__link:visited{
+      text-decoration: none;
+      color: #fff;
+  }
+  &__link-span{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: bottom;
+    transition: all .3s;
+    &-svg{
+      fill: #fff;
+      width:100%;
+      height:100%;
+    }
+    &:hover{
+      transform:rotate(90deg);
+    }
+  }
+}
+
+// .nav:hover .nav__side-bar{
+//   opacity: 1;
+//   width:230px;
+// }

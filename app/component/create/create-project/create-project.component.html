@@ -1,0 +1,14 @@
+          <div class="project__header">
+            <p class="project__name" >Project</p>
+
+            <app-bin (removeAllChek)="removeAllChek($event)"></app-bin>
+
+          </div>
+          <div class="project__double">
+
+            <app-project-table
+            (changeCheckBox)="changeCheckBox($event)"
+            [projectInfo]="projectInfo"
+            ></app-project-table>
+
+          </div>

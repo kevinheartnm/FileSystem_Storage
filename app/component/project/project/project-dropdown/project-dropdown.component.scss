@@ -1,0 +1,114 @@
+.dropdown{
+  &__block{
+    position: absolute;
+    top:0;
+    right:20px;
+    // margin: 0 auto;
+    width: 840px;
+    // transform:translateX(-50%);
+    z-index: 750;
+    // background-color: pink;
+    // display:block;
+    // background-color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__projects{
+    background-color: #fff;
+    display:flex;
+    position: relative;
+    z-index: 750;
+    // justify-content: center;
+  }
+  &__text{
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    width: 158px;
+    padding: 1.2rem 1.5rem;
+    color: #555;
+    overflow-x: hidden;
+  }
+  &__btn{
+    background-color: transparent;
+    border: 1px solid #aaa;
+    border-left: none;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: .5rem 0 1rem rgba(#000, .2);
+  }
+  &__btn:focus{
+    outline: none;
+    box-shadow: .5rem 0 1rem rgba(#000, .2);
+  }
+  &__btn-svg{
+    padding: .5rem;
+    width:3rem;
+    height:2rem;
+    fill: #666;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+
+
+
+  //SCROLL SEARCH ITEM
+  &__box{
+    display:none;
+    position: absolute;
+    top:100%;
+    // display:flex;
+    // justify-content: flex-end;
+    // background-color: #fff;
+
+  }
+  &__list{
+    list-style: none;
+    overflow-y: auto;
+    background-color: #fff;
+    height:160px;
+    border: 1px solid #eee;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: .5rem 1rem 2rem rgba(#000, 0.2);
+    // overflow: hidden;
+    // padding: 2rem;
+  }
+  &__items{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    overflow-x: hidden;
+    // padding:2rem;
+    // background-color: blue;
+    &:not(:first-child):hover{
+      background-color: #aaa;
+    }
+  }
+  &__input{
+      height: 3rem;
+      border: 1px solid rgba(#777, 0.2);
+      border-radius: 2px;
+      &:focus{
+        outline: 1px solid rgba(#777, 0.2);
+        border:1px solid rgba(orangered, 0.2);
+        box-shadow: .25rem .5rem 1rem rgba(orangered, 0.1)
+      }
+    &-svg{
+
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: .5rem;
+      margin-left: -2.4rem;
+      margin-right: 8px;
+    }
+  }
+}
+
+.dropdown__projects:hover  .dropdown__box{
+  display: block;
+}

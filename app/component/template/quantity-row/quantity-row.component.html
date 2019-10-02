@@ -1,0 +1,38 @@
+<!-- ONE QUANTITY RECORD -->
+<div class="template__quantity-record">
+  <div class="template__quantity-column">
+    <p class="template__quantity-field">Field</p>
+    <input class="template__quantity-input" type="text" name="field"  [(ngModel)]="data.field">
+  </div>
+  <div class="template__quantity-column-select">
+    <p class="template__quantity-field">Type</p>
+    <select  class="template__quantity-select"        [(ngModel)]="data.type" name="type">
+      <option
+      *ngFor="let type of dataType;"
+       [value]="type"
+       [selected]="data.type===type? true : null"
+       >{{type}}</option>
+      <!-- <option value="text">Text</option>
+      <option value="formula">Formula</option> -->
+    </select>
+  </div>
+  <div class="template__quantity-column">
+    <div style="height:50px; width:170px;">
+    <p class="template__quantity-field "
+    [ngClass]="showFormulaText()">Formula</p>
+    <input class="template__quantity-input "
+     type="text"
+      name="formula"
+      [(ngModel)]="data.formula"
+      [ngClass]="showFormulaText()">
+  </div>
+  </div>
+
+  <div class="template__quantity-column--end">
+    <button (click)="removeItem()" class="template__quantity-column-btn">
+      <svg class="template__quantity-column-btn-svg">
+         <use xlink:href="../../assets/sprite.svg#icon-bin"></use>
+      </svg>
+    </button>
+  </div>
+</div>

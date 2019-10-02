@@ -1,0 +1,16 @@
+<div class="register__header">
+  <app-searchbar class="table-head-tag"></app-searchbar>
+
+  <div class="register__name">Resource Catalog  </div>
+
+  <div class="register__btn-container">
+    <!-- BUTTON TO DISPLAY ADD LIST  -->
+    <app-plus-button (showMenuAdd)='showMenuAdd($event)'></app-plus-button>
+      <!-- SHOWS THE MENU OF ADDING TO LIST -->
+    <app-add-menu
+    (addOneRow)='addOneRowFromAddMenu($event)'
+    (addOneColumn)='addOneColumnFromAddMenu($event)'
+      [showMenu]="showMenu"
+      ></app-add-menu>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="add__menu" [ngClass]="showMenuList()">
+ <ul class="add__list">
+   <li class="add__menu-item">
+     <button  (click)="addRow()" class="add__menu-button">
+       <svg class="add__menu-svg--list">
+          <use xlink:href="../assets/sprite.svg#icon-paragraph-left"></use>
+        </svg>
+      <span>Add Row</span>
+    </button>
+  </li>
+   <li class="add__menu-item">
+     <button (click)="addColumn()" class="add__menu-button">
+       <svg class="add__menu-svg--list">
+          <use xlink:href="../assets/sprite.svg#icon-window"></use>
+        </svg>
+        <span>Add Column</span>
+      </button>
+    </li>
+   <li class="add__menu-item">
+   <label for="file" class="add__menu-button">
+     <input id="file" class="add__file" type="file" (change) = "addFile($event)" >
+     <svg class="add__menu-svg--list">
+        <use xlink:href="../assets/sprite.svg#icon-file-excel"></use>
+      </svg>
+     <span> Import CSV</span>
+   </label>
+   </li>
+ </ul>
+</div>

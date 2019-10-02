@@ -1,0 +1,65 @@
+
+//ADD BUTTON FOR
+.add{
+  &__menu{
+    position: absolute;
+    display: none;
+    left:30px;
+    transform: translateX(-100%);
+    width:150px;
+    height: 100px;
+    z-index: 300;
+    // background-color: blue;
+    border:  1px solid #aaa;
+    &-show{
+          display: block;
+    }
+  }
+  &__list{
+    // background-color: blue;
+  // padding: 5px;
+    height:  100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  &__menu-item{
+    flex-grow: 1;
+   background-color: #fff;
+   align-self: stretch;
+   // margin-bottom: 2px;
+   display: flex;
+  }
+  &__menu-button{
+    flex-grow: 1;
+    color: #777;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: .5rem .75rem 1.5rem rgba(#000,.15);
+    border: none;
+
+    span{
+      font-size: 1.2rem;
+    }
+    &:focus{
+      outline:none;
+    }
+    &:hover{
+      background-color: #ddd;
+    }
+  }
+  &__menu-svg--list{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #777;
+    margin: 0 10px;
+  }
+  &__file{
+    display:none;
+  }
+}

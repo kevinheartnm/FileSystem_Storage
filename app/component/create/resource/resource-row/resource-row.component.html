@@ -1,0 +1,12 @@
+     <td class="table__row together">
+       <label class="checkbox__container" >
+         <input (click)="onCheckBoxClick($event)"
+         class="checkbox__input"
+          type="checkbox"
+          [checked]="resourceCol.checked"
+          >
+         <span class="checkbox__checkmark"></span>
+       </label>
+       <p>{{resourceCol.resource.resourceName}}</p>
+     </td>
+     <td class="table__row"><p>{{resourceCol.resource.resourceCode}}</p></td>

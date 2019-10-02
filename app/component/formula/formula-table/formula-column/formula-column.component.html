@@ -1,0 +1,12 @@
+<app-formula-row
+ *ngFor="let row of tableRows;let colidx = index"
+  [row]="row"
+  [rowidx]="rowidx"
+  [colidx]="colidx"
+  [types]= "types"
+  [formulas]="formulas"
+  [columnName]="columnName"
+  [tableRows]="tableRows"
+  class="table__row"
+  (addChangesToTable)="addChangesToTable($event)">
+</app-formula-row>

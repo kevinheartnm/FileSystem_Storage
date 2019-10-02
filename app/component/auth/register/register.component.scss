@@ -1,0 +1,120 @@
+.login__box{
+  position: absolute;
+  // width:50%;
+  width: 300px;
+  margin: 0 auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  // background-color: blue;
+
+}
+.login__logo{
+padding:2.5rem;
+font-size: 3.6rem;
+font-weight: 700;
+color: orange;
+text-align: center;
+font-style: italic;
+}
+
+
+
+
+// FORM OF PAGE
+.form{
+  // padding: 2rem;
+  padding-bottom:  4rem;
+  width: 100%;
+  margin: 0 auto;
+  &__group{
+    &:not(:last-child){
+      margin-bottom: 1rem;
+    }
+  }
+  &__label{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    // margin-bottom: 2re
+  }
+  &__input{
+    display:block;
+    width:100%;
+    padding:1.2rem 2.0rem;
+    border:none;
+    border-radius: 2px;
+    background-color: #fbffc2;
+    font-size: 1.4rem;
+    // color:inherit;
+    // font-size: inherit;
+    &:focus{
+      outline: none;
+    }
+  }
+
+}
+
+.group__logs{
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+
+
+
+
+
+
+
+//CHECKBOX
+.checkbox{
+  &__container{
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  &__input{
+    display:none;
+  }
+  &__checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 4px;
+    margin-top: -5px;
+    background-color: #eee;
+  }
+  /* On mouse-over, add a grey background color */
+  &__input:hover  ~ &__checkmark {
+    background-color: #ccc;
+  }
+  &__input:checked ~ &__checkmark{
+      background-color: #2196F3;
+  }
+  &__checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  //
+  &__input:checked ~ &__checkmark:after {
+    display: block;
+  }
+  &__container &__checkmark:after{
+
+    left: 0;
+    right: 0;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) translate(5px, -3px); //translate(10px);
+  }
+}

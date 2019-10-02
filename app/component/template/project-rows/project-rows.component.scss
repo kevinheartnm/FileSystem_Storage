@@ -1,0 +1,108 @@
+//CONTAINER ALL
+.template{
+// THE LEFT SIDE OF THE TEMPLATE PAGE
+  &__project{
+    flex: 1 0 30%;
+    border:1px solid #000;
+    border-right: none;
+    display:flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    &-text{
+      padding: 1.5rem;
+      font-weight: 700;
+    }
+
+  }
+  &__fields{
+    display:flex;
+    height: 380px;
+    // padding: 0 .4rem;
+  }
+  &__field{
+    margin: 0 5px;
+    // padding: 2rem;
+    display:flex;
+    // &:nth-child(2n+1){
+      background-color: #aaa;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    // }
+      &-column{
+        flex: 1 0 70%;
+        padding: 1.5rem;
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+      }
+      &-checkbox{
+        padding: 1.5rem;
+        flex: 1 0 30%;
+        border-right: 1px solid #ccc;
+      }
+  }
+}
+
+
+.checkbox{
+  &__container{
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  &__input{
+    display:none;
+  }
+  &__checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 4px;
+    margin-top: -5px;
+    background-color: #eee;
+  }
+  /* On mouse-over, add a grey background color */
+  &__input:hover  ~ &__checkmark {
+    background-color: #ccc;
+  }
+  &__input:checked ~ &__checkmark{
+      background-color: #2196F3;
+  }
+  &__checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  //
+  &__input:checked ~ &__checkmark:after {
+    display: block;
+  }
+  //
+  &__container &__checkmark:after{
+    // left: 9px;
+    // top: 5px;
+    // display:flex;
+    // justify-content: center;
+    // align-items: center;
+    left: 0;
+    right: 0;
+    width: 5px;
+    height: 10px;
+    // transform: translateX(-10px);
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    // -webkit-transform: rotate(45deg);
+    // -ms-transform: rotate(45deg);
+    transform: rotate(45deg) translate(5px, -3px); //translate(10px);
+  }
+}
+
+.even{
+  background-color: #ccc;
+}
+.odd{
+  background-color: #fff;
+}

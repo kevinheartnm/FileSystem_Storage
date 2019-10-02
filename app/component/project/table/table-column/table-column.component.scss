@@ -1,0 +1,10 @@
+.table{
+  &__row{
+    display: table-cell;
+    width: 100%;
+    padding: .5rem 1rem;
+    overflow: hidden;
+    // border-right: 1px solid #aaa;
+    // height:100px;
+  }
+}

@@ -1,0 +1,28 @@
+<!-- QUANTITY CONTAINER -->
+<div style="position:relative" >
+<!-- class="template__quantity" -->
+  <div class="template__quantity-title">
+    <p class="template__quantity-text">Quantity survey fields</p>
+  </div>
+  <!-- PROVIDE A CONTAINER TO HOLD THE ITEMS -->
+  <div style="width: 100%; height:315px; overflow-y: auto;">
+  <!-- ONE QUANTITY RECORD -->
+    <app-quantity-row
+      *ngFor="let data of datas; let idx = index;"
+      [data]="data"
+      [id]="idx"
+      (removeAtIndex)="removeIndexOfItem($event)"
+      ></app-quantity-row>
+</div>
+<!-- ADDING BUTTON HERE -->
+<div class="template__quantity-add">
+
+  <label for="" style="margin-right:5px;">Add Field</label>
+  <button (click)="addQuantity()" class="template__quantity-add-btn">
+    <svg class="template__quantity-add-btn-svg">
+       <use xlink:href="../../assets/sprite.svg#icon-plus"></use>
+    </svg>
+  </button>
+</div>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="dropdown__block">
+  <div class="dropdown__projects">
+    <p class="dropdown__text">{{currentproject}}</p>
+    <button class="dropdown__btn">
+      <svg class="dropdown__btn-svg">
+         <use xlink:href="../../assets/sprite.svg#icon-play"></use>
+      </svg>
+    </button>
+    <div class="dropdown__box">
+      <ul class="dropdown__list">
+        <li class="dropdown__items">
+          <input
+          [(ngModel)]="searchInput"
+          class="dropdown__input"
+          type="text"
+           name="searchProjects" >
+          <svg (click)="searchProject()" class="dropdown__input-svg">
+             <use xlink:href="../../assets/sprite.svg#icon-search"></use>
+           </svg>
+        </li>
+        <li (click)="clickOnProject(project)" *ngFor="let project of projects" id="{{project._id}}" class="dropdown__items">
+          {{project.projectName}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

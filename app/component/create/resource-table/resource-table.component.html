@@ -1,0 +1,26 @@
+<!-- one of the poject  -->
+<div  >
+  <div class="project__header">
+    <p class="project__name">Resource Catalog</p>
+    <div class="project__btn">
+      <app-list (checkAllBoxes)="checkAllBoxes($event)"></app-list>
+      <app-share (shareAllCheck)="shareAllCheck($event)"></app-share>
+    </div>
+  </div>
+
+  <div class="project__double">
+    <!-- <table class="table"> -->
+    <table class="table">
+
+      <!-- TABLE COLUMN -->
+      <tr class="table__column" >
+        <th class="table__row">Project Name</th>
+        <th class="table__row">Project Code</th>
+      </tr>
+
+      <app-resource-row (changeCheckBox)="updateListWithCheck($event)" *ngFor="let resourceCol of resourceInfo;" [resourceCol]=resourceCol class="table__column"></app-resource-row>
+      <!-- <app-resource-row class="table__column"></app-resource-row>
+      <app-resource-row class="table__column"></app-resource-row> -->
+    </table>
+  </div>
+</div>

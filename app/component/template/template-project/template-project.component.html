@@ -1,0 +1,12 @@
+<div >
+  <div class="template__field">
+    <p class="template__project-text">Project scope fields</p>
+  </div>
+  <app-project-rows
+  *ngFor="let data of serviceData;let even= even;"
+  [data]="data"
+  [even]="even"
+  (addField)="addField($event)"
+  >
+  </app-project-rows>
+</div>

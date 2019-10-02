@@ -1,0 +1,49 @@
+.project__container{
+
+  background-color: #eee;
+  margin: 8rem 4rem;
+  height:500px;
+
+}
+
+
+.register{
+  &__container{
+    position: absolute;
+    // width:50%;
+    width: 70%;
+    // height: 60vh;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    // background-color: blue;
+    background-color: #fff;
+    box-shadow: 0.4rem 0.8rem 1.6rem rgba(#000, 0.2);
+  }
+  &__header{
+    width: 100%;
+    height: 40px;
+    background-color: #777;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__name{
+    font-size:1.2rem;
+    // background-color: blue;
+    // flex-grow: 2;
+    width:20rem;
+  }
+
+  &__btn-container{
+    position: relative;
+  }
+}
+
+
+//SHOW PLUS BUTTON ITEMS
+.register__btn-container:hover  .add__menu,
+.register__btn-container:focus  .add__menu,
+.register__btn-container:active  .add__menu{
+  display:block;
+}

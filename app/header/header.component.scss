@@ -1,0 +1,67 @@
+.header{
+  display:block;
+  height: 80px;
+  border-bottom: 2px solid #777;
+  // background-color: pink;
+
+  &__list{
+    display:flex;
+    list-style:none;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__profile{
+    display:flex;
+    width: 250px;
+    justify-content: space-between;
+    padding-right: 1rem;
+    align-items: flex-end;
+
+  }
+
+  &__window{
+    color: #fff;
+    width: 230px;
+    padding-bottom: 1rem;
+    padding-right: .5rem;
+    &-icon{
+        height: 5rem;
+        width: 5rem;
+        fill:#fff;
+    }
+  }
+  &__profile-icon{
+      height: 3rem;
+      width: 3rem;
+  }
+
+  &__help-icon{
+    cursor: pointer;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+
+
+  &__item{
+    &:first-child{
+      background-color: orangered;
+      align-self: stretch;
+      // for the svg icon and the  text
+      display: flex;
+      align-items: flex-end;
+    }
+    &:nth-child(2n){
+      font-size: 3.6rem;
+      letter-spacing: .2rem;
+    }
+  }
+
+  // &__list1{
+  //   align-self:flex-end;
+  //   // height: 100%;
+  //
+  //     // background-color: orangered;
+  // }
+}

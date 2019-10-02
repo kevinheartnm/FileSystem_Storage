@@ -1,0 +1,75 @@
+//CONTAINER ALL
+.template{
+  //DESCRIBE THE POSITION AND SPACE OF TEMPLATE
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width:920px;
+  height: 70vh;
+  // background-color: violet;
+  //CONTAINS PROJECT AND QUANTITY
+  &__fields{
+    display:flex;
+    height: 420px;
+  }
+
+
+  &__space{
+    height: 60px;
+    // background-color: purple;
+    border:1px solid #000;
+    border-top: none;
+  }
+
+  //BUTTON ON PAGE
+  &__save{
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__save-btn{
+    padding: 1rem 4rem;
+    background-color: orangered;
+    color: #fff;
+    border:none;
+    border-radius: 2px;
+    box-shadow: .3rem .6rem 1.2rem rgba(#000, 0.2);
+    transition: all .3s;
+
+    &:hover{
+      box-shadow: .3rem .6rem 1.2rem rgba(#000, 0.1);
+      transform: translateY(-2px);
+    }
+    &:focus, &:active{
+      outline: none;
+      box-shadow: .3rem .6rem 1.2rem rgba(#000, 0.15);
+      transform: translateY(-1px);
+    }
+  }
+
+
+// THE LEFT SIDE OF THE TEMPLATE PAGE
+  &__project{
+    flex: 1 0 30%;
+    // background-color: pink;
+    border:1px solid #000;
+    border-right: none;
+    display:flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+
+
+//QUANTITY FIELDS
+    &__quantity{
+      flex: 1 0 70%;
+      // background-color: orangered;
+      border:1px solid #000;
+      padding: 0 1rem;
+      position: relative;
+      // overflow-y: auto;
+    }
+}

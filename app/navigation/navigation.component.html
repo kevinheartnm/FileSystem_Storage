@@ -1,0 +1,28 @@
+<nav id="nav" class="nav">
+  <button class="nav__button" (click)="onNavigationClick()">
+    <svg class="nav__button-svg">
+      <use xlink:href="../assets/sprite.svg#icon-cheveron-right"></use>
+    </svg>
+  </button>
+  <!-- class="nav__side-bar"  [ngClass]="onNavigationClick()"-->
+  <div class="nav__side-bar" [ngClass]="showSlide()" >
+    <ul class="nav__list">
+      <li class="nav__item active"><a [routerLink]="['profile/project']" class="nav__link">Resource</a></li>
+      <li class="nav__item"><a [routerLink]="['profile/create']" class="nav__link">Project</a></li>
+      <li class="nav__item"><a [routerLink]="['profile/formula']" class="nav__link">Formula</a></li>
+      <li class="nav__item"><a [routerLink]="['profile/formula']" class="nav__link">Change Request</a></li>
+      <li class="nav__item"><a [routerLink]="['profile/formula']" class="nav__link">Budget</a></li>
+      <li class="nav__item">
+        <p class="nav__link">Prime Supplier
+          <span class="nav__link-span">
+
+           <svg class="nav__link-span-svg">
+              <use xlink:href="../assets/sprite.svg#icon-cheveron-right"></use>
+            </svg>
+          </span>
+        </p></li>
+      <li class="nav__item"><a [routerLink]="['profile/template']" class="nav__link">Approved Change</a></li>
+      <li class="nav__item"><a [routerLink]="['profile/create']" class="nav__link">Summary</a></li>
+    </ul>
+  </div>
+</nav>

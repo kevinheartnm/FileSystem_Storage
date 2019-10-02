@@ -1,0 +1,14 @@
+<div class="pagination">
+  <a (click)="previousPage()"  class="pagination__item " >&laquo;</a>
+  <div class="pagination__container">
+    <a
+    *ngFor="let item of [].constructor(pageAmount); let idx = index"
+    class="pagination__item"
+    (click)="onPageClick(idx)"
+    [ngClass]="currentlyActive(idx)">
+    {{idx + 1}}
+    </a>
+  </div>
+  <a (click)="nextPage()" class="pagination__item " >&raquo;</a>
+
+</div>

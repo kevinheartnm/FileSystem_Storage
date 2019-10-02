@@ -1,0 +1,20 @@
+<!-- take the table  -->
+            <table class="table">
+
+              <!-- TABLE COLUMN -->
+              <tr class="table__column" >
+                <th class="table__row">Project Name</th>
+                <th class="table__row">Project Code</th>
+              </tr>
+
+               <!-- TABLE ROW -->
+               <app-project-table-row
+               (changeCheckBox)="changeCheckBoxRow($event)"
+               class="table__column"
+                *ngFor="let projectCol of projectInfo;"
+               [projectCol]="projectCol"></app-project-table-row>
+               <!-- <app-project-table-row  class="table__column"></app-project-table-row>
+               <app-project-table-row  class="table__column"></app-project-table-row> -->
+
+
+              </table>

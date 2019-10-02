@@ -1,0 +1,12 @@
+<div class="searchbar">
+  <input
+   [(ngModel)]="resourceCode"
+   class="searchbar__input"
+   type="text"
+   placeholder="Keysearch">
+  <button class="searchbar__btn" (click)="clickOnSearch()">
+    <svg class="searchbar__btn-svg">
+       <use xlink:href="../assets/sprite.svg#icon-search"></use>
+     </svg>
+  </button>
+</div>

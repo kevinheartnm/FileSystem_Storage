@@ -1,0 +1,53 @@
+<div >
+<!-- <div class="main__content"> -->
+  <app-table-head
+  (addOneRow)="addOneRow($event)"
+  (addOneColumn)="addOneColumn($event)"
+  ></app-table-head>
+  <table class="table">
+    <!-- TABLE COLUMN -->
+    <thead>
+      <tr class="table__column">
+        <th class="table__row-head"
+         *ngFor="let column of columnName;">
+         {{column}}
+        </th>
+      </tr>
+    </thead>
+     <!-- TABLE ROW -->
+     <app-table-column
+      class="table__column"
+      *ngFor="let rows of rowColValues;let rowidx = index"
+      [tableRows]="rows"
+      [rowidx]="rowidx"
+      (updateTable)="updateTable($event)"
+      >
+     </app-table-column>
+  </table>
+  <app-project-mod [tableRows]="rowColValues"></app-project-mod>
+
+  <!-- POPUP FOR ADD COLUMN BUTTON  -->
+  <ng-template [ngIf]="showPopup">
+    <div class="popup" >
+      <div class="popup__box">
+        <div class="form__group">
+          <label for="column" class="form__label">Enter Column Name:</label>
+        </div>
+        <div class="form__group">
+          <input
+          [(ngModel)]="newColumn"
+          type="text"
+          name="column"
+           id="column"
+            class="form__input">
+        </div>
+        <div class="form__group">
+          <div class="popup__btn">
+            <button class="form__submit" (click)="onSumbitColumn()">Submit</button>
+            <button class="form__cancel" (click)="onCancelColumn()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

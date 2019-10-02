@@ -1,0 +1,28 @@
+<div class="login__box">
+        <p class="login__logo">Register</p>
+          <form class="form" action=""  #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <div class="form__group">
+                <label class="form__label" for="username">Username</label>
+                <input class="form__input" id="username" type="text" name="username"  ngModel required>
+            </div>
+            <div class="form__group">
+                <label class="form__label"  for="password">Password</label>
+                <input class="form__input" id="password" type="password" name="password" value="" autocomplete="password" ngModel required/>
+            </div>
+            <div class="form__group">
+                <label class="form__label"  for="password">Password Re-enter</label>
+                <input class="form__input" id="passwordCheck" type="password" name="passwordCheck" value="" autocomplete="password" ngModel required/>
+            </div>
+            <div class="form__group">
+                <label class="form__label"  for="name">Name</label>
+                <input class="form__input" id="name" type="text" name="name"  ngModel required/>
+            </div>
+            <div class="form__group">
+              <button type="submit" class="btn btn__login btn--orange">Submit</button>
+            </div>
+          </form>
+          <div class="group__logs">
+            <a class="btn btn__signup btn--orange" [routerLink]="['/login']"> sign in </a>
+
+          </div>
+      </div>

@@ -1,0 +1,33 @@
+.project{
+
+  // position: absolute;
+  // top:50%;
+  // left:50%;
+  // transform: translate(-50%, -50%);
+  // background-color: blue;
+  width: 400px;
+  height: 440px;
+  // height: 450px;
+  background-color: #fff;
+  // overflow-y: auto;
+  box-shadow: .5rem 1rem 2rem rgba(#000, .2);
+  &__double{
+    // width:100%;
+    // background-color: pink;
+    overflow-y: auto;
+    height: 417px;
+  }
+}
+
+.projectpage{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: space-between;
+
+  width:840px;
+  height: 71vh;
+}

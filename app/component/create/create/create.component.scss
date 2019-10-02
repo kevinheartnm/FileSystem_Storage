@@ -1,0 +1,25 @@
+.dropdown__block{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 840px;
+    z-index: 750;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.projectpage{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: space-between;
+
+  width:840px;
+  height: 60vh;
+}

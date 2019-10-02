@@ -1,0 +1,25 @@
+<header id="header" class="header">
+  <ul class="header__list">
+    <li class="header__item header__list1">
+      <div class="header__window">
+        <svg  class="header__window-icon">
+          <use xlink:href="../assets/sprite.svg#icon-windows8"></use>
+        </svg>
+      Resource Management
+      </div>
+
+   </li>
+    <li class="header__item">{{project}}</li>
+    <li class="header__item">
+      <div class="header__profile">
+        <!-- when hover over the content in this box it give the user the tooltip -->
+        <app-profile [name]="name" [userDate]="userDate" ></app-profile>
+
+        <p class="header__profile_name">{{name}}</p>
+        <svg  class="header__help-icon">
+          <use xlink:href="../assets/sprite.svg#icon-question-circle-o"></use>
+        </svg>
+      </div>
+    </li>
+  </ul>
+</header>

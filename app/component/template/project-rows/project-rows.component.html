@@ -1,0 +1,12 @@
+<!-- ONE OF THE ROWS OF THE PROJECTS -->
+<div class="template__field" [ngClass]="evenRowColor()">
+
+  <p class="template__field-column">{{data}}</p>
+  <div class="template__field-checkbox">
+    <label class="checkbox__container" >
+      <input (click)="onCheckBoxChange($event)" class="checkbox__input" type="checkbox"  >
+      <span class="checkbox__checkmark"></span>
+      </label>
+  </div>
+
+</div>

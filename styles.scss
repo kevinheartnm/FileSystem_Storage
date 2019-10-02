@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+//GLOBAL RESET
+*,*::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+/*
+default font size is 16 px
+change default font size to
+ 62.5*16px = 10px
+*/
+
+html{
+  font-size: 62.5%;
+}
+body{
+  // width and height dimensions include border + padding + context
+  box-sizing: border-box;
+  background-color: lightblue;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Arial", sans-serif;
+}
+
+.main{
+  display:flex;
+
+
+// all components are going to be inside of main__content
+  &__content{
+    position: relative;
+    // background-color: pink;
+    flex-grow: 1;
+    height: 89.5vh;
+  }
+}
+.link,
+.link:link, .link:visited{
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  // box-shadow: .3rem .6rem 1.2rem rgba(#000, 0.3);
+  // transition: all 0.3s;
+
+  // &:hover{
+  //     box-shadow: .3rem .6rem 1.2rem rgba(#000, 0.15);
+  // }
+  // &:focus, &:active{
+  //     box-shadow: .3rem .6rem 1.2rem rgba(#000, 0.25);
+  // }
+}
+.together{
+  display:flex;
+  // background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//BUTTON COMPONENTS
+
+.btn{
+display:inline-block;
+text-decoration: none;
+padding: 1rem 1.5rem;
+border:none;
+border-radius: 2px;
+cursor: pointer;
+  &__login{
+    width:100%;
+    color: #fff;
+    box-shadow: .3rem .6rem 1.2rem rgba(#000, .3);
+    transition: all .3s;
+    &:hover{
+      transition: translateY(-1px);
+      box-shadow: .3rem .6rem 1.2rem rgba(#000, .15);
+    }
+    &:focus, &:active{
+      outline: none;
+      transition: translateY(-.5px);
+      box-shadow: .3rem .6rem 1.2rem rgba(#000, .25);
+    }
+    // height:3rem;
+    // padding: 1rem 1.5rem;
+  }
+  &__signup{
+    // padding: 1
+    color: #fff;
+    box-shadow: .3rem .6rem 1.2rem rgba(#000, .3);
+    transition: all .3s;
+    &:hover{
+      transition: translateY(-1px);
+      box-shadow: .3rem .6rem 1.2rem rgba(#000, .15);
+    }
+    &:focus, &:active{
+      outline: none;
+      transition: translateY(-.5px);
+      box-shadow: .3rem .6rem 1.2rem rgba(#000, .25);
+    }
+  }
+  &--orange{
+    background-color: orangered;
+  }
+  &__add{
+    padding: .5rem 1rem;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    fill:#fff;
+    box-shadow: 0 .5rem 1rem rgba(#000, .25);
+
+    transition: all .3s;
+  }
+  &__add:hover{
+    transform: translateY(-1px);// tra//scale(2.1rem);
+    box-shadow: 0 .5rem 1rem rgba(#000, .2);
+  }
+  &__add:focus, &__add:active {
+    outline: none;
+    box-shadow: 0 .5rem .75rem rgba(#000, .3);
+    transform: translateY(-.5px);
+  }
+
+
+
+  &__list, &__share{
+    padding: 0;
+    width:3rem;
+    height:3rem;
+    box-shadow: 0 .5rem 1rem rgba(#000, .25);
+    transition: all .3s;
+    &:hover{
+      box-shadow: 0 .5rem 1rem rgba(#000, .2);
+      transform: translateY(-1px);
+    }
+    &:focus, &:active{
+      outline:none;
+      box-shadow: 0 .5rem .75rem rgba(#000, .3);
+      transform: translateY(-.5px);
+    }
+  }
+  &__list-svg--project, &__share-svg--project{
+    width:2rem;
+    height:2rem;
+  }
+  // activates the list
+  &__list{
+  }
+
+  &__bin{
+        padding: .5rem;
+         margin-right: 10px;
+         fill: #fff;
+        align-self: flex-end;
+        box-shadow: 0 .5rem 1rem rgba(#000, .25);
+        transition: all .3s;
+        &:hover{
+          box-shadow: 0 .5rem 1rem rgba(#000, .2);
+          transform: translateY(-1px);
+        }
+        &:focus, &:active{
+          outline:none;
+          box-shadow: 0 .5rem .75rem rgba(#000, .3);
+          transform: translateY(-.5px);
+        }
+    }
+}
+
+
+
+
+// //SHOW PLUS BUTTON ITEMS
+// .register__btn-container:hover #add-menu .add__menu,
+// .register__btn-container:focus  #add-menu .add__menu,
+// .register__btn-container:active  #add-menu .add__menu{
+//   display:block;
+// }

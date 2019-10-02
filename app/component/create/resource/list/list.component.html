@@ -1,0 +1,26 @@
+<div class="list-btn__container">
+  <button class="btn btn__list btn--orange">
+    <svg class="btn__share-svg--project">
+       <use xlink:href="../../assets/sprite.svg#icon-list"></use>
+     </svg>
+  </button>
+
+  <div class="list-btn__menu">
+   <ul class="list-btn__list">
+      <li class="list-btn__options">
+        <label (change)="selectAllChecks($event)" class="radio__container" >
+          <input class="radio__input" type="radio" name="list">
+          <span class="radio__checkmark"></span>
+           <span class="radio__text">Select All</span>
+        </label>
+      </li>
+      <li class="list-btn__options">
+        <label class="radio__container" >
+          <input (change)="removeAllChecks($event)" class="radio__input" type="radio" name="list">
+          <span class="radio__checkmark"></span>
+          <span class="radio__text">Clear selection</span>
+        </label>
+      </li>
+   </ul>
+ </div>
+</div>

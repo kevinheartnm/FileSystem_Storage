@@ -1,0 +1,14 @@
+<div class="table__row-inner">
+  <input (focus)="onFocusInput()" class="table__row-input" type="text" [(ngModel)]="row" >
+    <button (click)="addRow()" class="table__btn-add" [ngStyle]="showButtonsOnFocus()">
+      <svg class="table__btn-add-svg">
+         <use xlink:href="../assets/sprite.svg#icon-checkmark"></use>
+       </svg>
+    </button>
+    <button (click)="removeRow()" class="table__btn-remove" [ngStyle]="showButtonsOnFocus()" >
+    <!-- [ngClass]="showButtonsOnFocus()"> -->
+      <svg class="table__btn-remove-svg">
+         <use xlink:href="../assets/sprite.svg#icon-plus"></use>
+       </svg>
+    </button>
+ </div>

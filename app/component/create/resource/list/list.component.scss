@@ -1,0 +1,122 @@
+
+
+.project{
+
+  width: 400px;
+  height: 60vh;
+  // height: 450px;
+  background-color: #fff;
+  box-shadow: .5rem 1rem 2rem rgba(#000, .2);
+  &__header{
+      width: 100%;
+      height: 40px;
+      background-color: #777;
+      display:flex;
+      // justify-content: space-between;
+      align-items: center;
+
+  }
+  &__name{
+    flex-grow: 2;
+    // background-color: blue;
+    text-align: center;
+  }
+  &__btn{
+    margin-right: 10px;
+    width:6.6rem;
+    align-self: stretch;
+    fill:#fff;
+
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // position: relative;
+  }
+  &__double{
+    // width:100%;
+    // background-color: pink;
+    height: 54.5vh;
+  }
+
+}
+
+.list-btn{
+
+  &__menu{
+    display:none;
+    position:absolute;
+    background-color: #fff;
+    opacity:0.9;
+    width: 150px;
+    padding:2rem;
+    border: 1px solid #eee;
+    box-shadow: .4rem .75rem 1.5rem rgba(#000, 0.2);
+    z-index: 250;
+  }
+  &__list{
+    list-style: none;
+  }
+  &__options{
+    display:flex;
+    &:not(:last-child){
+      margin-bottom: 1rem;
+    }
+  }
+}
+.list-btn__container:hover .list-btn__menu{
+  display:block;
+}
+
+
+.radio{
+  &__container{
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 1.2rem;
+
+  }
+  &__input{
+    display:none;
+  }
+  &__checkmark{
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 4px;
+    margin-top: -5px;
+    background-color: #fff;
+    border: 1.5px solid #777;
+  }
+  /* On mouse-over, add a grey background color */
+  &__input:hover  ~ &__checkmark {
+    background-color: #ccc;
+  }
+  &__input:checked ~ &__checkmark{
+      // background-color: #2196F3;
+      // border: 1px solid #777;
+  }
+  &__checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  &__input:checked ~ &__checkmark:after {
+    display: block;
+  }
+  &__container &__checkmark:after{
+    left: 0;
+    right: 0;
+    width: 7px;
+    height: 13px;
+    border: 1px solid #777;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) translate(1px, -6px); //translate(10px);
+  }
+  &__text{
+    margin-left: 5px;
+  }
+}

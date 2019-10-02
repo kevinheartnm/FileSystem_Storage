@@ -1,0 +1,62 @@
+<div >
+<!-- <div class="main__content"> -->
+  <app-formula-table-head></app-formula-table-head>
+  <table class="table">
+
+    <!-- TABLE COLUMN -->
+
+    <thead>
+      <tr class="table__column">
+        <th class="table__row-head"
+         *ngFor="let column of columnName;">
+         {{column}}
+        </th>
+      </tr>
+    </thead>
+    <!-- <tr class="table__column" >
+  	<th class="table__row">Company</th>
+  	<th class="table__row">Contact</th>
+
+  	<th class="table__row">Quantity</th>
+  	<th class="table__row">Price</th>
+  	<th class="table__row">Revenue</th>
+    </tr> -->
+
+     <!-- TABLE ROW -->
+     <app-formula-column
+      class="table__column"
+      *ngFor="let rows of reprecentFormulaPageData;let rowidx = index"
+      [tableRows]="rows"
+      [rowidx]="rowidx"
+      [types]= "types"
+      [formulas]="formulas"
+      [columnName]="columnName"
+      (updateTable)="updateTable($event)"
+      >
+     </app-formula-column>
+     <!-- <tr class="table__column">
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+     </tr>
+
+     <tr class="table__column">
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+  	 <td class="table__row"><input class="table__row-input" type="text" value="something"></td>
+     </tr> -->
+  </table>
+    <div class="table__modifications">
+      <a class="table__modifications-text" [routerLink]="['/profile/template']">Edit Quantity Survey Template</a>
+      <button (click)="onFormulaSubmit()" class="table__modifications-btn">
+        <svg class="table__modifications-btn-svg">
+           <use xlink:href="../../assets/sprite.svg#icon-checkmark"></use>
+        </svg>
+        Submit
+      </button>
+    </div>
+</div>

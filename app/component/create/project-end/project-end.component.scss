@@ -1,0 +1,43 @@
+.table{
+&__modifications{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  // background-color: pink;
+  width: 100%;
+  margin-bottom: -40px;
+
+  &-text{
+    text-decoration: none;
+    font-weight: 700;
+    color: blue;
+  }
+  &-btn{
+    background-color: orangered;
+    color: #fff;
+    padding:.5rem 1rem;
+    border: none;
+    transition: all .3s;
+    box-shadow: .3rem .5rem 1rem rgba(#000, .3);
+    &:hover{
+      transform: translateY(-1px);
+      box-shadow: .3rem .5rem 1rem rgba(#000, .15);
+    }
+
+    &:focus, &:active{
+      outline:none;
+      transform: translateY(-.5px);
+      box-shadow: .3rem .5rem 1rem rgba(#000, .2);
+    }
+    &-svg{
+      fill: #fff;
+      width: 1rem;
+      height:1rem;
+    }
+  }
+}
+}

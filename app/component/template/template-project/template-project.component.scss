@@ -1,0 +1,27 @@
+//CONTAINER ALL
+.template{
+// THE LEFT SIDE OF THE TEMPLATE PAGE
+  &__project-text{
+      padding: 1.5rem;
+      font-weight: 700;
+    }
+
+  &__field{
+    margin: 0 5px;
+    display:flex;
+      background-color: #aaa;
+      border: 1px solid #ccc;
+
+      border-bottom: none;
+  }
+
+}
+
+// app-project-rows:nth-child(2n+1) .template__field{
+//         background-color: #aaa;
+//         border-top: 1px solid #ccc;
+//         border-bottom: 1px solid #ccc;
+// }
+.odd{
+  background-color: #eee;
+}

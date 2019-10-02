@@ -1,0 +1,8 @@
+<app-table-rows
+ *ngFor="let row of tableRows;let colidx = index"
+  [row]="row"
+  [rowidx]="rowidx"
+  [colidx]="colidx"
+  class="table__row"
+  (addChangesToTable)="addChangesToTable($event)">
+</app-table-rows>
